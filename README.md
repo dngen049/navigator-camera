@@ -1,3 +1,44 @@
+# Navigator-Camera
+
+this is an example on how you can use `navigator.permissions` to check for permissions access like `camera, geolocation etc...`
+
+```javascript
+navigator.permissions.query({ name: "camera" }).then((result) => {
+  if (result.state === "granted") {
+    alert("Permission granted");
+  }
+  if (result.state === "prompt") {
+    // then prompt to user to allow access
+  }
+  if (result.state === "denied") {
+    alert("Permissions denied");
+  }
+});
+```
+
+with a combination of `navigation.getUserMedia` you can prompt the user to allow access
+
+```javascript
+const constraint = {
+  video: { width: 1280, height: 720 },
+  audio: false,
+};
+navigator.getUserMedia(
+  constraint,
+  () => {
+    alert("Success");
+  },
+  (e) => {
+    alert("error", e);
+  }
+);
+```
+
+For more information checkout
+
+- [Permissions](https://developer.mozilla.org/en-US/docs/Web/API/Permissions/query)
+- [getUserMedia](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/getUserMedia)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
