@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 
 const App = () => {
+  const [dis, setDis] = useState(true);
   const checkPermission = () => {
     console.log("clicked");
     const constraint = {
@@ -37,6 +38,35 @@ const App = () => {
       alert("navigator.permissions not supported in this browser");
     }
   };
+  const getCamera = () => {
+    const constraint = {
+      video: true,
+      audio: false,
+    };
+    const video = document.getElementById("video");
+
+    if (!!navigator.getUserMedia) {
+      navigator.mediaDevices
+        .getUserMedia(constraint)
+        .then((stream) => {
+          video.srcObject = stream;
+          setDis(false);
+        })
+        .catch((e) => {
+          alert("error", e);
+        });
+    } else {
+      alert("getUserMedia not supported in this browser");
+    }
+  };
+  const takePic = () => {
+    const canvas = document.getElementById("c");
+    const video = document.getElementById("video");
+    canvas.getContext("2d").drawImage(video, 0, 0, 300, 300);
+    video.srcObject.getTracks().forEach((track) => track.stop());
+    video.srcObject = null;
+    setDis(true);
+  };
   return (
     <div className="App">
       Welcome to my deploy
@@ -46,6 +76,19 @@ const App = () => {
       <button onClick={checkPermission}>
         Check if permission is supported
       </button>
+      <br />
+      <button onClick={getCamera}>Get camera access</button>
+      <video id="video" autoPlay width="300" height="300">
+        video stream NA
+      </video>
+      <input
+        onClick={takePic}
+        id="b"
+        type="button"
+        disabled={dis}
+        value="Take picture"
+      ></input>
+      <canvas id="c" width="300" height="300"></canvas>
     </div>
   );
 };
