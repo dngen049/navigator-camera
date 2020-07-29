@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/navigator-camera/static/css/main.5f361e03.chunk.css",
-    "main.js": "/navigator-camera/static/js/main.6fe5e8ce.chunk.js",
-    "main.js.map": "/navigator-camera/static/js/main.6fe5e8ce.chunk.js.map",
+    "main.js": "/navigator-camera/static/js/main.0f3355ae.chunk.js",
+    "main.js.map": "/navigator-camera/static/js/main.0f3355ae.chunk.js.map",
     "runtime-main.js": "/navigator-camera/static/js/runtime-main.aca07778.js",
     "runtime-main.js.map": "/navigator-camera/static/js/runtime-main.aca07778.js.map",
     "static/js/2.78ef0db0.chunk.js": "/navigator-camera/static/js/2.78ef0db0.chunk.js",
     "static/js/2.78ef0db0.chunk.js.map": "/navigator-camera/static/js/2.78ef0db0.chunk.js.map",
     "index.html": "/navigator-camera/index.html",
-    "precache-manifest.03d584075327fdb1695374540579d974.js": "/navigator-camera/precache-manifest.03d584075327fdb1695374540579d974.js",
+    "precache-manifest.0d3203cd8cf31e85f6f3a8af623c0b89.js": "/navigator-camera/precache-manifest.0d3203cd8cf31e85f6f3a8af623c0b89.js",
     "service-worker.js": "/navigator-camera/service-worker.js",
     "static/css/main.5f361e03.chunk.css.map": "/navigator-camera/static/css/main.5f361e03.chunk.css.map",
     "static/js/2.78ef0db0.chunk.js.LICENSE.txt": "/navigator-camera/static/js/2.78ef0db0.chunk.js.LICENSE.txt",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.aca07778.js",
     "static/js/2.78ef0db0.chunk.js",
     "static/css/main.5f361e03.chunk.css",
-    "static/js/main.6fe5e8ce.chunk.js"
+    "static/js/main.0f3355ae.chunk.js"
   ]
 }
