@@ -1,5 +1,7 @@
 # Navigator-Camera
 
+https://dngen049.github.io/navigator-camera/
+
 this is an example on how you can use `navigator.permissions` to check for permissions access like `camera, geolocation etc...`
 
 ```javascript
