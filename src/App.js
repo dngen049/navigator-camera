@@ -45,7 +45,7 @@ const App = () => {
     };
     const video = document.getElementById("video");
 
-    if (!!navigator.getUserMedia) {
+    if (!!navigator.mediaDevices) {
       navigator.mediaDevices
         .getUserMedia(constraint)
         .then((stream) => {
@@ -53,10 +53,10 @@ const App = () => {
           setDis(false);
         })
         .catch((e) => {
-          alert("error", e);
+          alert("error with camera");
         });
     } else {
-      alert("getUserMedia not supported in this browser");
+      alert("mediaDevices not supported in this browser");
     }
   };
   const takePic = () => {
